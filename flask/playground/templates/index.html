@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+</head>
+<style>
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-box{
+    
+        height: 90px;
+        width: 90px;
+        border: 2px solid black;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        background-color: lightseagreen;
+    }
+    .box-container {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <h1>Welcome!</h1>
+    <div class="box-container">
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+    </div>
+</body>
+</html>
