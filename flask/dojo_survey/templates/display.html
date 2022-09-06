@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoSurvey Results</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    #box{
+        background-color:rgb(196, 195, 195);
+        width: fit-content;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    button{
+        padding: 10px;
+        background-color: royalblue;
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px;
+    }
+</style>
+<body>
+    <div id="box">
+    <h1>Submission Info:</h1>
+    <p>Name: {{session['name']}}</p>
+    <p>Dojo Location: {{session['location']}}</p>
+    <p>Favorite Language: {{session['language']}}</p>
+    <p>Comments: {{session['comments']}}</p>
+    <button><a href="/clear">Go Back</a></button>
+    </div>
+</body>
+</html>
