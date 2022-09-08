@@ -21,6 +21,34 @@ def create():
     User.create(request.form)
     return redirect('/users')
 
+@app.route('/user/show/<int:id>')
+def show(id):
+    data ={ 
+        "id":id
+    }
+    return render_template("read_one.html",user=User.get_one(data))
+
+@app.route('/user/edit/<int:id>')
+def edit(id):
+    data ={ 
+        "id":id
+    }
+    return render_template("edit_user.html",user=User.get_one(data))
+
+@app.route('/user/update',methods=['POST'])
+def update():
+    User.edit(request.form)
+    return redirect('/users')
+
+@app.route('/user/delete/<int:id>')
+def delete(id):
+    data ={
+        'id': id
+    }
+    User.delete(data)
+    return redirect('/users')
+
+
 
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
