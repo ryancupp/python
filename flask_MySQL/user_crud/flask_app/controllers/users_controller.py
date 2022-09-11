@@ -6,7 +6,6 @@ from flask_app.models.users import User
 def index():
     return redirect('/users')
 
-
 @app.route('/users')
 def users():
     return render_template("read_all.html",users=User.get_all())

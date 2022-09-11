@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Ninja</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+    #create{
+        text-decoration: none;
+        color: black;
+    }
+    
+    #btn{
+        margin: 10px 0px 20px 0px;
+    }
+</style>
+<body>
+    <h1>New Ninja</h1>
+    <form action="/ninja/create" method="post">
+        <p>Dojo:</p>
+        <select name="dojo_id" id="">
+            {% for one_dojo in dojos%}
+            <option value="{{one_dojo.id}}">{{one_dojo.name}}</option>
+            {% endfor %}
+        </select>
+        <p>First Name:</p>
+        <input type="text" name="first_name" id="">
+        <p>Last Name:</p>
+        <input type="text" name="last_name" id="">
+        <p>Age:</p>
+        <input type="text" name="age" id="">
+        <button>Create</button>
+    </form>
+    <a href="/dojos">Home</a>
+</body>
+</html>
