@@ -45,5 +45,4 @@ def welcome():
 @app.route("/clear")
 def clear_session():
     session.clear()
-    
     return redirect('/')
