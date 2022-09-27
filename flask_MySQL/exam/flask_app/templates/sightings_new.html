@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Sighting</title>
+</head>
+<body>
+    <h1>Sasquatch Websighting</h1>
+    <h3>{{logged_user.first_name}} {{logged_user.last_name}}</h3>
+    <a href="/welcome">Back to Sightings</a>
+    <a href="/clear">Logout</a>
+    <h2>Report a Sighting</h2>
+    {% for message in get_flashed_messages() %}
+        {{message}}
+    {% endfor %}
+    <form action="/sightings/create" method="post">
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location">
+        <label for="what_happened">What Happened</label>
+        <textarea name="what_happened" id="what_happened" cols="30" rows="10"></textarea>
+        <label for="date">Date of Sighting</label>
+        <input type="date" name="date" id="date">
+        <label for="num"># of Sasquatches</label>
+        <input type="number" name="num" id="num">
+        <button>Report</button>
+    </form>
+</body>
+</html>

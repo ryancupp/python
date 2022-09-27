@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function getLyrics(){
+            $.get("https://api.metrolyrics.com/v1/"+document.getElementById("artist").value+"/"+document.getElementById("title").value,
+                function(data){
+                document.getElementById("output").innerHTML=data.lyrics.replace(new RegExp("\n", "g"), "<br>")
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1>Search the Lyrics of a Song</h1>
+    <label for="title" id="title">Title</label>
+    <input type="text" name="title" id="title" placeholder="title">
+    <label for="artist">Artist</label>
+    <input type="text" name="artist" id="artist" placeholder="artist">
+    <button onclick="getLyrics()">Get Lyrics</button>
+    <div id="output"></div>
+</body>
+</html>

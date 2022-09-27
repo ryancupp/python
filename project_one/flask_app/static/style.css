@@ -1,0 +1,41 @@
+* {
+    font-family: 'Inter', sans-serif;
+
+    padding: 0;
+}
+
+body{
+    
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 300;
+    
+}
+
+h3{
+    font-style: italic;
+
+}
+
+table, th, td {
+    border: 0px solid black;
+    width: 50%;
+
+}
+
+th{
+    background-color: rgb(195, 191, 191);
+    font-weight: 200;
+    padding: 15px;
+}
+
+td{
+    font-style: italic;
+}
+
+#links{
+    color: black;
+    padding: 0px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>album</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+    font-family: 'Inter', sans-serif;
+
+    padding: 0;
+}
+
+body{
+    
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 300;
+    
+}
+
+h3{
+    font-style: italic;
+
+}
+
+table, th, td {
+    border: 0px solid black;
+    width: 50%;
+
+}
+
+th{
+    background-color: rgb(195, 191, 191);
+    font-weight: 200;
+    padding: 15px;
+}
+
+td{
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+}
+
+#links{
+    color: black;
+    padding: 0px;
+
+}
+</style>
+<body>
+    <div>
+        <h1>Welcome {{logged_user.first_name}}</h1> 
+        <p><a id="links" href="/clear">Logout</a></p>
+        <p><a id="links" href="albums/new">Post an album</a></p>
+    </div>
+    <h3>User's current favorites:</h3>
+    <table>
+        <thead>
+            <th>Album Title:</th>
+            <th>Artist:</th>
+            <th>Genre:</th>
+            <th>Favorite Song:</th>
+            <th>User:</th>
+        </thead>
+        <tbody>
+            {% for album in all_albums%}
+            <tr>
+                <td>{{album.album_title}}</td>
+                <td>{{album.artist}}</td>
+                <td>{{album.genre}}</td>
+                <td>{{album.favorite_song}}</td>
+                <td>{{album.poster.first_name}} {{album.poster.last_name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a id="links" href="">Search an album with Spotify</a></p>
+    <p><a id="links" href="">Random album</a></p>
+</body>
+</html>

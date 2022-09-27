@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Album</title>
+</head>
+<body>
+    <h1>Post an Album</h1>
+    <a href="/welcome">Back to all albums</a>
+    <a href="/clear">logout</a>
+    {% for message in get_flashed_messages() %}
+        {{message}}
+    {% endfor %}
+    <form action="/albums/create" method="post">
+        <label for="album_title">Album Title</label>
+        <input type="text" name="album_title" id="album_title" placeholder="Album Title">
+        <label for="artist">Artist</label>
+        <input type="text" name="artist" id="artist" placeholder="Artist">
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" id="genre" placeholder="Genre">
+        <label for="favorite_song">Favorite song from the album</label>
+        <input type="text" name="favorite_song" id="favorite_song">
+        <button>Post</button>
+    </form>
+</body>
+</html>
