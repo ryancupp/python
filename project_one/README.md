@@ -6,14 +6,14 @@ Full Stack Web application that allows users to login/regiester and post an albu
 [![Flask][Flask.com]][Flask-url]
 [![MySQL][MySQL.com]][MySQL-url]
 [![HTML/JSP][HTML.com]][HTML-url]
-[![CSS][CSS.com]][CSS-url]
+[![CSS][CSS]][CSS-url]
 [![Jinja][Jinja.com]][Jinja-url]
 [![Visual Studio Code][VS.com]][VS-url]
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[CSS.com]: https://img.shields.io/badge/CSS-blue?logo=css3
+[CSS]: https://img.shields.io/badge/CSS-blue?logo=css3
 [CSS-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [HTML.com]: https://img.shields.io/badge/-HTML-orange?logo=HTML5
 [HTML-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
