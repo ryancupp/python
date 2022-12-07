@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Album</title>
+    <title>Edit</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
-
 
 <body>
     <div id="container">
@@ -23,22 +22,24 @@
         {{message}}
         {% endfor %}
         <div id="new-form">
-            <form action="/albums/create" method="post">
+            <form action="/albums/{{album.id}}/update" method="post">
                 <div id="form-elements">
-                    <label for="album_title">Album Title:</label>
-                    <input id="input-field" type="text" name="album_title" id="album_title" placeholder="Album Title">
+                    <label for="album_title">Album Title</label>
+                    <input id="input-field" type="text" name="album_title" id="album_title"
+                        value="{{album.album_title}}">
                 </div>
                 <div id="form-elements">
-                    <label for="artist">Artist:</label>
-                    <input id="input-field" type="text" name="artist" id="artist" placeholder="Artist">
+                    <label for="artist">Artist</label>
+                    <input id="input-field" type="text" name="artist" id="artist" value="{{album.artist}}">
                 </div>
                 <div id="form-elements">
-                    <label for="genre">Genre:</label>
-                    <input id="input-field" type="text" name="genre" id="genre" placeholder="Genre">
+                    <label for="genre">Genre</label>
+                    <input id="input-field" type="text" name="genre" id="genre" value="{{album.genre}}">
                 </div>
                 <div id="form-elements">
-                    <label for="favorite_song">Favorite song from the album:</label>
-                    <input id="input-field" type="text" name="favorite_song" id="favorite_song" placeholder="Song">
+                    <label for="favorite_song">Favorite song from the album</label>
+                    <input id="input-field" type="text" name="favorite_song" id="favorite_song"
+                        value="{{album.favorite_song}}">
                 </div>
                 <div id="submit-button">
                     <input id="submit-field" type="submit">
@@ -47,7 +48,7 @@
         </div>
         <div id="link-div">
             <p><a id="links" href="/welcome">Back to all albums</a></p>
-            <p><a id="links" href="/clear">logout</a></p>        
+            <p><a id="links" href="/clear">logout</a></p>
         </div>
     </div>
 </body>

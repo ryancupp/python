@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
+
 <body>
-    <h1>Register</h1>
-    {% for message in get_flashed_messages(category_filter = ['reg']) %}
+    <div id="container">
+        <div id="top-bar">
+            <h1>albummer</h1>
+        </div>
+        <h1>Register</h1>
+        {% for message in get_flashed_messages(category_filter = ['reg']) %}
         {{message}}
-    {% endfor %}
-    <form action="/users/register" method="post">
-        <label for="first_name">First Name:</label>
-        <input type="text" name="first_name" id="first_name">
-        <label for="last_name">Last Name:</label>
-        <input type="text" name="last_name" id="last_name">
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="email">
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password">
-        <label for="password2"> Confirm Password:</label>
-        <input type="password" name="password2" id="password2">
-        <button>Submit</button>
-    </form>
-    <h1>Login</h1>
-    {% for message in get_flashed_messages(category_filter = ['log']) %}
+        {% endfor %}
+        <div id="new-form">
+            <form action="/users/register" method="post">
+                <div id="form-elements">
+                    <label for="first_name">First Name:</label>
+                    <input id="input-field" type="text" name="first_name" id="first_name">
+                </div>
+                <div id="form-elements">
+                    <label for="last_name">Last Name:</label>
+                    <input id="input-field" type="text" name="last_name" id="last_name">
+                </div>
+                <div id="form-elements">
+                    <label for="email">Email:</label>
+                    <input id="input-field" type="text" name="email" id="email">
+                </div>
+                <div id="form-elements">
+                    <label for="password">Password:</label>
+                    <input id="input-field" type="password" name="password" id="password">
+                </div>
+                <div id="form-elements">
+                    <label for="password2"> Confirm Password:</label>
+                    <input id="input-field" type="password" name="password2" id="password2">
+                </div>
+                <div id="submit-button">
+                    <input id="submit-field" type="submit">
+                </div>
+            </form>
+        </div>
+
+        <h1>Login</h1>
+        {% for message in get_flashed_messages(category_filter = ['log']) %}
         {{message}}
-    {% endfor %}
-    <form action="/users/login" method="post">
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="email">
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password">
-        <button>Submit</button>
-    </form>
+        {% endfor %}
+        <div id="new-form">
+            <form action="/users/login" method="post">
+                <div id="form-elements">
+                    <label for="email">Email:</label>
+                    <input id="input-field" type="text" name="email" id="email">
+                </div>
+                <div id="form-elements">
+                    <label for="password">Password:</label>
+                    <input id="input-field" type="password" name="password" id="password">
+                </div>
+                <div id="submit-button">
+                    <input id="submit-field" type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

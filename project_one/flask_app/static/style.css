@@ -1,41 +1,97 @@
 * {
     font-family: 'Inter', sans-serif;
-
     padding: 0;
 }
 
-body{
-    
+body {
+    background-color: lavender;
 }
 
-h1{
-    font-size: 60px;
-    font-weight: 300;
-    
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h3{
+#top-bar{
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#favs {
     font-style: italic;
 
 }
 
-table, th, td {
-    border: 0px solid black;
-    width: 50%;
-
+#tableHead {
+    border: 1px solid white;
 }
 
-th{
-    background-color: rgb(195, 191, 191);
+
+th {
     font-weight: 200;
+    font-size: 30px;
     padding: 15px;
 }
 
-td{
+td {
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+}
+
+#links {
+    color: black;
+    padding: 0px;
+
+}
+
+#link-div{
+    text-align: center;
+}
+
+/* form */
+
+#new-form{
+    border: 1px solid black;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-button{
+    text-align: center;
+    padding: 10px;
+}
+
+#form-elements{
+    padding: 10px;
+}
+
+#input-field{
+    background-color: lavender;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#submit-field{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    text-transform: lowercase;
     font-style: italic;
 }
 
-#links{
-    color: black;
-    padding: 0px;
+/* show-one */
+
+#big-title{
+    font-style: italic;
+    font-size: 150px;
 }
