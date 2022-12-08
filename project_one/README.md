@@ -16,6 +16,9 @@ Full Stack Web application that allows users to login/register and post an album
 
 ### Screenshots:
 ![Home](login.png)
+![Home](showall.png)
+![Home](post.png)
+![Home](view.png)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
