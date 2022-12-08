@@ -1,10 +1,10 @@
 # Albummer
 
-Full Stack Web application that allows users to login/regiester and post an album of their choosing. They can view other users posts, as well as delete and edit their own. 
+Full Stack Web application that allows users to login/register and post an album of their choosing. They can view other users posts, as well as delete and edit their own. 
 
 <hr>
 
-Tech used:
+### Tech used:
 <!--  -->
 [![Python][Python]][Python-url]
 [![Flask][Flask]][Flask-url]
@@ -13,6 +13,8 @@ Tech used:
 [![CSS][CSS]][CSS-url]
 [![Jinja][Jinja]][Jinja-url]
 [![Visual Studio Code][VS]][VS-url]
+
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
