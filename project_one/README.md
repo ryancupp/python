@@ -14,7 +14,8 @@ Full Stack Web application that allows users to login/register and post an album
 [![Jinja][Jinja]][Jinja-url]
 [![Visual Studio Code][VS]][VS-url]
 
-
+### Screenshots:
+![Home](login.png)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
